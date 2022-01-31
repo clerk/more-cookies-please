@@ -1,24 +1,7 @@
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
-
-const ClerkFeatures = () => (
-  <Link href="/user">
-    <a className={styles.cardContent}>
-      <img src="/icons/layout.svg" />
-      <div>
-        <h3>Explore features provided by Clerk</h3>
-        <p>
-          Interact with the user button, user profile, and more to preview what
-          your users will see
-        </p>
-      </div>
-      <div className={styles.arrow}>
-        <img src="/icons/arrow-right.svg" />
-      </div>
-    </a>
-  </Link>
-);
+import MoreCookies from "../components/MoreCookies";
 
 const SignupLink = () => (
   <Link href="/sign-up">
@@ -38,63 +21,22 @@ const SignupLink = () => (
   </Link>
 );
 
-// Main component using <SignedIn> and <SignedOut>
-//
-// The SignedIn and SignedOut components are used to control rendering depending
-// on whether or not a visitor is signed in.
-//
-// https://docs.clerk.dev/frontend/react/signedin-and-signedout
 const Main = () => (
   <main className={styles.main}>
-    <h1 className={styles.title}>Welcome to your new app</h1>
-    <SignedIn>
-      <p className={styles.description}>You have successfully signed in</p>
-    </SignedIn>
     <SignedOut>
-      <p className={styles.description}>Sign up for an account to get started</p>
-    </SignedOut>
-
-    <div className={styles.cards}>
-      <div className={styles.card}>
-        <SignedIn>
-          <ClerkFeatures />
-        </SignedIn>
-        <SignedOut>
+      <h1 className={styles.title}>Welcome to your new app</h1>
+      <p className={styles.description}>
+        Sign up for an account to get started
+      </p>
+      <div className={styles.cards}>
+        <div className={styles.card}>
           <SignupLink />
-        </SignedOut>
+        </div>
       </div>
-
-      <div className={styles.card}>
-        <Link href="https://dashboard.clerk.dev">
-          <a target="_blank" rel="noreferrer" className={styles.cardContent}>
-            <img src="/icons/settings.svg" />
-            <div>
-              <h3>Configure settings for your app</h3>
-              <p>
-                Visit Clerk to manage instances and configure settings for user
-                management, theme, and more
-              </p>
-            </div>
-            <div className={styles.arrow}>
-              <img src="/icons/arrow-right.svg" />
-            </div>
-          </a>
-        </Link>
-      </div>
-    </div>
-
-    <div className={styles.links}>
-      <Link href="https://docs.clerk.dev">
-        <a target="_blank" rel="noreferrer" className={styles.link}>
-          <span className={styles.linkText}>Read Clerk documentation</span>
-        </a>
-      </Link>
-      <Link href="https://nextjs.org/docs">
-        <a target="_blank" rel="noreferrer" className={styles.link}>
-          <span className={styles.linkText}>Read Next.js documentation</span>
-        </a>
-      </Link>
-    </div>
+    </SignedOut>
+    <SignedIn>
+      <MoreCookies />
+    </SignedIn>
   </main>
 );
 
