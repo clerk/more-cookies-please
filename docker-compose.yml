@@ -25,7 +25,7 @@ services:
       HASURA_GRAPHQL_DEV_MODE: 'true'
       HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
       HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
-      # HASURA_GRAPHQL_JWT_SECRET: '{"jwk_url":"<YOUR_FRONTEND_API>/.well-known/jwks.json"}'
+      HASURA_GRAPHQL_JWT_SECRET: '{"jwk_url":"https://clerk.creative.kangaroo-76.lcl.dev/.well-known/jwks.json"}'
 
 volumes:
   db_data:
