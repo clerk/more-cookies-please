@@ -31,7 +31,7 @@ const MyApp = ({ Component, pageProps }) => {
       navigate={(to) => router.push(to)}
     >
       <Head>
-        <title>Clerk + Hasura Starter</title>
+        <title>More Cookies Please</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="viewport"
