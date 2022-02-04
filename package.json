@@ -1,10 +1,12 @@
 {
-  "name": "clerk-hasura-starter",
-  "version": "0.1.1",
-  "private": true,
+  "name": "more-cookies-please",
+  "version": "0.1.0",
+  "description": "Sample codebase for Clerk + Hasura with Next.js tutorial",
+  "keywords": ["clerk", "hasura", "nextjs", "react", "graphql", "postgres"],
+  "homepage": "https://github.com/clerkinc/more-cookies-please#readme",
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "dev": "next dev",
     "start": "next start"
   },
   "dependencies": {
