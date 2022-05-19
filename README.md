@@ -1,16 +1,10 @@
 # More Cookies Please 🍪
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/clerkinc/more-cookies-please) [![Clerk documentation](https://img.shields.io/badge/documentation-clerk-green.svg)](https://docs.clerk.dev) [![@ClerkDev on Twitter](https://img.shields.io/twitter/follow/ClerkDev?style=social)](https://twitter.com/intent/follow?screen_name=ClerkDev)
+[![Clerk documentation](https://img.shields.io/badge/documentation-clerk-green.svg)](https://clerk.dev/docs) [![@ClerkDev on Twitter](https://img.shields.io/twitter/follow/ClerkDev?style=social)](https://twitter.com/intent/follow?screen_name=ClerkDev)
 
 This sample repo is associated with a [Clerk and Hasura tutorial](https://clerk.dev/tutorials/build-a-cookie-clicker-app-with-clerk-and-hasura) that demonstrates how you can use [Clerk](https://clerk.dev) to authenticate with a [Hasura](https://hasura.io/) GraphQL API endpoint.
 
 You can browse the code and run it locally, but it will not connect to the GraphQL API and Postgres database without setting your own [environment variables](./env.local.sample) and running the [Docker services](./docker-compose.yml).
-
----
-
-**Clerk is Hiring!**
-
-Would you like to work on Open Source software and help maintain this repository? [Apply today](https://apply.workable.com/clerk-dev/)
 
 ---
 
